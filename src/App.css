@@ -1,38 +1,23 @@
-.App {
+.header {
+height: 6vh;
+  background-color: rgb(181, 194, 210);
+  text-align: start;
+margin-bottom: 3rem;
+}
+
+.naslov {
+  height: 24vh;
+  width: 34vw;
+border-radius: 25px;
+  border: 3rem;
+  margin: auto;
+  background-color: rgb(106, 214, 214);
+}
+.naslov h1 {
+
   text-align: center;
+  margin-bottom: 1rem;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.naslov h3 {
+  text-align: center;
 }

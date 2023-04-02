@@ -1,25 +1,23 @@
-import logo from './logo.svg';
-import './App.css';
 
+import './App.css';
 function App() {
   return (
+    <>
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+     <header className='header'>
+      <h1 style={{color:"#fffff",fontFamily:"Arial"}}>Logo</h1>
       </header>
+      <div className="naslov">
+        <h1>Dobrodosli u nasu aplikaciju</h1>
+        <h3>vase ime je Hometin</h3>
+      </div>
+     
     </div>
+  
+  
+  </>
   );
 }
+
 
 export default App;
