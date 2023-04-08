@@ -1,6 +1,6 @@
 import React from "react";
 import "./PersonCard.css";
-import { FaGithub } from "react-icons/fa";
+
 
 export default function PersonCard() {
   return (
@@ -24,7 +24,7 @@ export default function PersonCard() {
           target="blank"
           style={{ color: "darkblue" }}
         >
-          <FaGithub style={{ width: "50px", height: "50px" }} />
+          
         </a>
       </div>
     </div>

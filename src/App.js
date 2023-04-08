@@ -1,8 +1,7 @@
 import React from "react";
 import "./App.css";
-import Greeting from "./components/greetings/greeting";
-import { Navbar } from "./components/Navbar/Navbar";
-import PersonCard from "./components/Cards/PersonCard/PersonCard";
+
+import PersonCard from "./compoments/Cards/PersonCard/PersonCard";
 
 function App() {
   return (
@@ -11,8 +10,7 @@ function App() {
       {" "}
       {/* Fragment - najcesce se koristi za wrappovanje */}
       <div className="App">
-        <Navbar>{/* <p>Samo za primer</p> */}</Navbar>
-        <Greeting appName={"Our First App"} username={"Bakir Ujkanovic"} />
+        
         <PersonCard />
       </div>
     </>
