@@ -1,23 +1,22 @@
+import React from "react";
+import "./App.css";
+import Greeting from "./components/greetings/greeting";
+import { Navbar } from "./components/Navbar/Navbar";
+import PersonCard from "./components/Cards/PersonCard/PersonCard";
 
-import './App.css';
 function App() {
   return (
+    //  React.createElement("p", {}, "Neki paragraf");
     <>
-    <div className="App">
-     <header className='header'>
-      <h1 style={{color:"#fffff",fontFamily:"Arial"}}>Logo</h1>
-      </header>
-      <div className="naslov">
-        <h1>Dobrodosli u nasu aplikaciju</h1>
-        <h3>vase ime je Hometin</h3>
+      {" "}
+      {/* Fragment - najcesce se koristi za wrappovanje */}
+      <div className="App">
+        <Navbar>{/* <p>Samo za primer</p> */}</Navbar>
+        <Greeting appName={"Our First App"} username={"Bakir Ujkanovic"} />
+        <PersonCard />
       </div>
-     
-    </div>
-  
-  
-  </>
+    </>
   );
 }
-
 
 export default App;
