@@ -1,11 +1,11 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import "./App.css";
 import Greeting from "./components/Greetings/Greeting";
 import { Navbar } from "./components/Navbar/Navbar";
 import PersonCard from "./components/Cards/PersonCard/PersonCard";
 import persons from "./common/persons.json";
 import hotels from "./common/hotels.json";
-import teams from "./common/teams.json";
+import teamsJSON from "./common/teams.json";
 import HotelCard from "./components/Cards/HotelCard/HotelCard";
 import Form from "./components/Form/Form";
 import TeamCard from "./components/Cards/TeamCard/TeamCard";
@@ -50,7 +50,7 @@ const poruke = [
   "Subota je dan za druzenje",
   "Subota je dan za kafu",
 ];
-
+export  const BASE_URL = "https://api.quotable.io"
 function App() {
   // const [count, setCount] = React.useState(0);
   const [count, setCount] = useState(0);
@@ -69,6 +69,44 @@ function App() {
     const reversed = _arr.reverse();
     setArr(reversed);
   };
+
+
+
+  const [teams,setTeams]=useState(teamsJSON)
+  console.log(teams)
+
+
+
+  const deleteTeam = (id) =>
+ {
+
+const filteredTeams = teams.filter((team) => team.id!=id)
+setTeams(filteredTeams);
+
+ }
+
+
+ 
+const[qotes,setQuotes]=useState([])
+const [page,setPage]=useState(1)
+
+const getQuotes = async() =>
+ {
+
+const quotes= await fetch(`${BASE_URL}/quotes?page=${page}`)
+const data =await quotes.json();
+const results=data.results;
+setQuotes(results);
+console.log(results);
+console.log(data)
+
+ }
+
+
+
+useEffect(()=>{
+  getQuotes();
+},[page])
 
   return (
     //  React.createElement("p", {}, "Neki paragraf");
@@ -188,9 +226,11 @@ function App() {
         <div className="Teams">
         {teams.map((team) => (
         <TeamCard 
+        key={team.id}
         name={team.name}
         matches={team.matches}
         points={team.points}
+        deleteTeam={()=>deleteTeam(team.id)}
         />
          ))}
       
