@@ -17,3 +17,6 @@ function TeamCard({name,matches,points,deleteTeam}) {
 }
 
 export default TeamCard;
+
+
+
