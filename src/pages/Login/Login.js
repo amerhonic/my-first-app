@@ -3,7 +3,8 @@ import "./Login.css";
 import axios from "axios";
 import { BASE_URL } from "../../config/api";
 import { useNavigate } from "react-router-dom";
-import { AppContext } from "../../context/AppContext";
+import AppContext from '../../context';
+
 
 export function Login() {
   const navigation = useNavigate();
